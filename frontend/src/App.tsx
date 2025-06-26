@@ -28,8 +28,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-900">
-      <h1 className="text-3xl font-bold text-red-500">Tailwind is Working 🎉</h1>
-    
+
       <div className="bg-white shadow-md rounded-lg p-8 w-80">
         <h1 className="text-2xl font-bold mb-6 text-center">
           {isLogin ? 'Login' : 'Register'} Form
