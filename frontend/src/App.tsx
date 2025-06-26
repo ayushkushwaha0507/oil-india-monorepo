@@ -1,6 +1,6 @@
-// src/App.tsx
 import { useState } from 'react';
 import './index.css';
+
 
 function App() {
   const [form, setForm] = useState({ username: '', password: '' });
@@ -27,17 +27,50 @@ function App() {
   };
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1>{isLogin ? 'Login' : 'Register'} Form</h1>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '300px' }}>
-        <input type="text" name="username" placeholder="Username" value={form.username} onChange={handleChange} required />
-        <input type="password" name="password" placeholder="Password" value={form.password} onChange={handleChange} required />
-        <button type="submit">{isLogin ? 'Login' : 'Register'}</button>
-      </form>
-      <p style={{ marginTop: '1rem' }}>
-        {isLogin ? 'No account?' : 'Already registered?'}{' '}
-        <button onClick={() => setIsLogin(!isLogin)}>{isLogin ? 'Register here' : 'Login here'}</button>
-      </p>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-900">
+      <h1 className="text-3xl font-bold text-red-500">Tailwind is Working 🎉</h1>
+    
+      <div className="bg-white shadow-md rounded-lg p-8 w-80">
+        <h1 className="text-2xl font-bold mb-6 text-center">
+          {isLogin ? 'Login' : 'Register'} Form
+        </h1>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <input
+            className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            type="text"
+            name="username"
+            placeholder="Username"
+            value={form.username}
+            onChange={handleChange}
+            required
+          />
+          <input
+            className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={form.password}
+            onChange={handleChange}
+            required
+          />
+          <button
+            className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors"
+            type="submit"
+          >
+            {isLogin ? 'Login' : 'Register'}
+          </button>
+        </form>
+        <p className="mt-4 text-center text-sm">
+          {isLogin ? 'No account?' : 'Already registered?'}{' '}
+          <button
+            className="text-blue-600 hover:underline"
+            onClick={() => setIsLogin(!isLogin)}
+            type="button"
+          >
+            {isLogin ? 'Register here' : 'Login here'}
+          </button>
+        </p>
+      </div>
     </div>
   );
 }
