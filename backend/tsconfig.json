@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", 
+    "typeRoots": ["../node_modules/@types", "./node_modules/@types"],
     "target": "ES2020",
     "module": "commonjs",
     "rootDir": "./src",
