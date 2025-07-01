@@ -4,6 +4,7 @@ import cors from 'cors';
 import { config } from './config/config';
 import fileUploadRoutes from './routes/fileUploadRoutes';
 
+
 dotenv.config();
 
 const app = express();
