@@ -32,5 +32,8 @@
     "vite": "^6.3.5"
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "keywords": [],
+  "author": ""
 }
